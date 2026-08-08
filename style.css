@@ -1,1 +1,527 @@
+/* =========================================
+   GENERAL
+========================================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #f8f6f1;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    height: 78px;
+    background: #111111;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f2c14e;
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #eeeeee;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f2c14e;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(10, 10, 10, 0.72),
+            rgba(10, 10, 10, 0.78)
+        ),
+        linear-gradient(
+            135deg,
+            #161616,
+            #3a2910
+        );
+
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: #d99f27;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1.02;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #f2c14e;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    font-size: 1.2rem;
+    color: #dddddd;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 27px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background: #d99f27;
+    color: #111;
+}
+
+.primary:hover {
+    background: #f2c14e;
+}
+
+.secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    padding: 90px 20px;
+    background: white;
+}
+
+.intro-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.music-icon {
+    font-size: 3rem;
+    color: #d99f27;
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 7%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #666;
+}
+
+
+/* =========================================
+   ABOUT CARDS
+========================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background: white;
+    padding: 40px 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    border-top: 4px solid #d99f27;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #666;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events-section {
+    padding: 100px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #30230f
+        );
+
+    color: white;
+}
+
+.section-heading.light h2 {
+    color: white;
+}
+
+.section-heading.light > p:last-child {
+    color: #cccccc;
+}
+
+.event-placeholder {
+    max-width: 650px;
+    margin: auto;
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.04);
+}
+
+.event-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.event-placeholder h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.event-placeholder p {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   MEMBERSHIP
+========================================= */
+
+.membership {
+    max-width: none;
+    background: #f2c14e;
+}
+
+.membership-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.membership .eyebrow {
+    color: #5c4100;
+}
+
+.membership h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.membership p {
+    max-width: 650px;
+}
+
+.membership .button {
+    background: #111;
+    color: white;
+}
+
+.membership .button:hover {
+    background: #333;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    padding: 100px 7%;
+    background: white;
+}
+
+.contact-box {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+
+    padding: 30px;
+
+    background: #f8f6f1;
+
+    border-radius: 8px;
+}
+
+.contact-item > span {
+    font-size: 1.8rem;
+}
+
+.contact-item h3 {
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #111;
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo {
+    color: #f2c14e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #999;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 2.4rem;
+    }
+}
